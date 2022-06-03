@@ -19,7 +19,7 @@ const ExpenseForm = (props) => {
     // });
   };
 
-  const amoutChangeHandler = (event) => {
+  const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
     // setUserInput({
     //   ...userInput,
@@ -40,7 +40,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amout: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -71,7 +71,7 @@ const ExpenseForm = (props) => {
             min="0.01"
             step="0.01"
             value={enteredAmount}
-            onChange={amoutChangeHandler}
+            onChange={amountChangeHandler}
           />
         </div>
         <div className="new-expense__control">
